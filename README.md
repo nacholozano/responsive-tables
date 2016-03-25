@@ -20,7 +20,7 @@ You can use the default 'responsive-tables.css' or make your own css file. <br>
 
 There are some required css rules ( [See required css rules](https://github.com/nacholozano/responsive-tables/blob/master/source%20code/dev/css/responsive-tables.css) ).
 
-If you need to recalculate de tables width yo ucan run `nl_responsiveTable.resize();`
+If you need to recalculate de tables width you can run `nl_responsiveTable.resize();`
 
 ### HTML markup
 
