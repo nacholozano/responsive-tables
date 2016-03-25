@@ -22,6 +22,7 @@ There are some required css rules ( [See required css rules](https://github.com/
 
 ### HTML markup
 
+```
 <table class="responsive-table">
     <thead>
         <tr>
@@ -38,6 +39,7 @@ There are some required css rules ( [See required css rules](https://github.com/
         </tr>
     </tbody>
 </table>
+```
 
 ## Future
 
