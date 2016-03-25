@@ -18,7 +18,7 @@ Minified CSS -> 195 bytes <br>
 You must add the `class='responsive-table'` and make a css class named 'compress-table' with the style you want the tables get when are too long for the viewport. <br>
 You can use the default 'responsive-tables.css' or make your own css file. <br>
 
-There are some required css rules ( [See required css rules]() ).
+There are some required css rules ( [See required css rules](https://github.com/nacholozano/responsive-tables/blob/master/source%20code/dev/css/responsive-tables.css) ).
 
 ### HTML markup
 
