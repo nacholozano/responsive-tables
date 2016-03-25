@@ -1,0 +1,33 @@
+/* Compress class */
+
+/* Customize as you plase ! */
+
+/* Required */
+
+.compress-table>thead{
+  display: none;
+}
+
+.compress-table td::before{
+  content: attr(data-header)' ';  
+}
+
+.compress-table td{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Recommended */
+
+.compress-table{
+  width: 100%;
+}
+
+.compress-table td:hover{
+  /*background-color: white; */ /* You can change this */
+}
+
+.responsive-table th,td{
+  /* white-space: nowrap; */ /* use this if you don't want split lines */
+}
