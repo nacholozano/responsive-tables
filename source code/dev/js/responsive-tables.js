@@ -1,14 +1,15 @@
 ; (function(){
 
-  var tables = document.getElementsByClassName('responsive-table'),
-  numTables = tables.length,
-  tableWidthAtt = 'originalWidth',
-  compressClass = 'compress-table',
-  headersSelectors = 'thead>tr>th',
-  cellHeaderAtt = 'data-header',
-  itTables,itHeaders,itCells,table,containerWidth,headers,cells;
+  var tables = document.getElementsByClassName('responsive-table'), // get tables
+  numTables = tables.length, // get number of tables
+  tableWidthAtt = 'originalWidth', // name of the attibute we add to each table to know when remove 'compress-table' class
+  compressClass = 'compress-table', // class for compress tables
+  headersSelectors = 'thead>tr>th', // get table header
+  cellHeaderAtt = 'data-header', // name of the html attribute that will contain the column header value, this attribute will be set on each <td> tag when the table is compressed
+  itTables,itHeaders,itCells,  // iterators
+	table,containerWidth,headers,cells; // current table information
 
-  resize();
+  resize(); // adjust tables on page load
   window.addEventListener("resize",resize);
   window.nl_responsiveTable = {
     resize: resize
@@ -18,22 +19,29 @@
 
     function resize(){
 
+			// iterate tables
       for( itTables = 0 ; itTables < numTables ; itTables++){
         
+				// get table and its praent width
         table = tables[itTables];
         containerWidth = getWidth(table.parentElement);
 
+				// if table overflows
         if( overflow() && !compressed() ){
   
+					   // the first time the table is compressed, it saves the table original width  
+					   // and set up the headers for td tags
              if( !table.getAttribute(tableWidthAtt) ){
                
-              table.setAttribute(tableWidthAtt,table.offsetWidth);
+							table.setAttribute(tableWidthAtt,table.offsetWidth);
               setHeaders();
 
              }
 
+					   // last, it does compress the table
              table.classList.add(compressClass);
 
+					// if table does not overflow, it decompress the table 
           }else if( notOverflow() && compressed() ){
 
             table.classList.remove(compressClass);
@@ -41,7 +49,8 @@
           }
       }
     }
-
+	
+	 // get style attribute from element
    function getStyle(el, att) {
       if (getComputedStyle !== 'undefined') {
           return getComputedStyle(el, null)[att];
@@ -50,26 +59,32 @@
       }
   }
 
+	// get element width
   function getWidth(el){
     return el.clientWidth-(parseFloat(getStyle(el,'paddingRight'))+parseFloat(getStyle(el,'paddingLeft')));
   }
 
+	// check if the table overflows
   function overflow(){
     return table.offsetWidth > containerWidth+1;
   }
 
+	// check if the table does not overflow
   function notOverflow(){
     return table.getAttribute(tableWidthAtt) <= containerWidth-1;
   }
 
+	// check if table is compressed
   function compressed(){
     return table.classList.contains(compressClass);
   }
 
-  function cellSelector(){
+	// get appropriate td tag for each th in thead
+	function cellSelector(){
     return 'tbody>tr>td:nth-child('+(itHeaders+1)+')';
   }
   
+	// set the correct 'data-header' value on each <td> 
   function setHeaders(){
     headers = table.querySelectorAll(headersSelectors);
 

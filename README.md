@@ -45,6 +45,7 @@ If you need to recalculate de tables width you can run `nl_responsiveTable.resiz
 
 ## Future
 
-1. Customizable library
-2. Accessible tables
-3. More types of tables and styles
+1. IE8+ compatibility
+2. Customizable library
+3. Accessible tables
+4. More types of tables and styles
