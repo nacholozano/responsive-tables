@@ -12,6 +12,7 @@
   content: attr(data-header)' ';  
 }
 
+/* you might want change the display for better compatibility with IE */
 .compress-table td{
   display: flex;
   flex-wrap: wrap;
