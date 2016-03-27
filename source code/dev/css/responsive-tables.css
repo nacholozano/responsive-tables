@@ -14,6 +14,9 @@
 
 /* you might want change the display for better compatibility with IE */
 .compress-table td{
+	display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
