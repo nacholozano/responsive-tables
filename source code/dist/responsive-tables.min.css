@@ -1,1 +1,1 @@
-.compress-table>thead{display:none}.compress-table td::before{content:attr(data-header)' '}.compress-table td{display:flex;flex-wrap:wrap;justify-content:space-between}.compress-table{width:100%}
+.compress-table>thead{display:none}.compress-table td::before{content:attr(data-header)' '}.compress-table td{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;flex-wrap:wrap;justify-content:space-between}.compress-table{width:100%}
