@@ -11,7 +11,7 @@ Minified CSS -> 195 bytes <br>
 
 ## Browser support from [Can I use](http://caniuse.com/)
  
-![alt text](http://i.imgur.com/EAUXozp.png "Browser support")
+![alt text](http://i.imgur.com/g8QyFRt.jpg "Browser support")
 
 ## Usage
 
@@ -45,7 +45,6 @@ If you need to recalculate de tables width you can run `nl_responsiveTable.resiz
 
 ## Future
 
-1. IE8+ compatibility
-2. Customizable library
-3. Accessible tables
-4. More types of tables and styles
+1. Customizable library
+2. Accessible tables
+3. More types of tables and styles
