@@ -2,7 +2,7 @@
 
 	var tables = document.getElementsByClassName('responsive-table'), // get tables
 			numTables = tables.length, // get number of tables
-			tableWidthAtt = 'originalWidth', // name of the attibute we add to each table to know when remove 'compress-table' class
+			tableWidthAtt = 'data-originalWidth', // name of the attibute we add to each table to know when remove 'compress-table' class
 			compressClass = 'compress-table', // class for compress tables
 			headersSelectors = 'thead>tr>th', // get table header
 			cellHeaderAtt = 'data-header', // name of the html attribute that will contain the column header value, this attribute will be set on each <td> tag when the table is compressed
