@@ -7,7 +7,7 @@ Minified Javascript -> 1.027 bytes <br>
 Minified CSS -> 195 bytes <br>
 (You can find this files in dist folder) <br>
 
-[Demo](http://codepen.io/nacholozano/pen/zqwXNm?editors=0100)
+[Demo](http://codepen.io/nacholozano/pen/zqwXNm?editors=0010)
 
 ## Browser support from [Can I use](http://caniuse.com/)
  
