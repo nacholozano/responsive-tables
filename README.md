@@ -10,6 +10,8 @@ Minified CSS -> 195 bytes <br>
 [Demo](http://codepen.io/nacholozano/pen/zqwXNm?editors=0010)
 
 ## Browser support from [Can I use](http://caniuse.com/)
+
+You might want change the flex display in css for better compatibility with IE <br> <br>
  
 ![alt text](http://i.imgur.com/g8QyFRt.jpg "Browser support")
 
