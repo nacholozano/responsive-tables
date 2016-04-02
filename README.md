@@ -1,4 +1,4 @@
-# responsive-tables
+# responsive-tables v0.1
 
 A tiny and free dependency solution for responsive web design tables made with Vanilla JS and CSS. <br>
 It works with multiple tables.
