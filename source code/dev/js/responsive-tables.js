@@ -7,7 +7,7 @@
 			headersSelectors = 'thead>tr>th', // get table header
 			cellHeaderAtt = 'data-header', // name of the html attribute that will contain the column header value, this attribute will be set on each <td> tag when the table is compressed
 			itTables,itHeaders,itCells,  // iterators
-			table,containerWidth,headers,cells; // current table information
+			table,containerWidth,headers,cells, // current table information
 	
 			timeout,
 			throttle = false,   // <-------------------------------- throttle here !!
