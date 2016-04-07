@@ -3,7 +3,7 @@
 A tiny and free dependency solution for responsive web design tables made with Vanilla JS and CSS. <br>
 It works with multiple tables.
 
-Minified Javascript -> 1.027 bytes <br>
+Minified Javascript -> 1.218 bytes <br>
 Minified CSS -> 195 bytes <br>
 (You can find this files in dist folder) <br>
 

@@ -8,13 +8,19 @@
 			cellHeaderAtt = 'data-header', // name of the html attribute that will contain the column header value, this attribute will be set on each <td> tag when the table is compressed
 			itTables,itHeaders,itCells,  // iterators
 			table,containerWidth,headers,cells; // current table information
-
-	resize(); // adjust tables on page load
-	window.addEventListener("resize",resize);
-	window.nl_responsiveTable = {
-		resize: resize
-	};
 	
+			timeout,
+			throttle = false,   // <-------------------------------- throttle here !!
+			throttleTime = 300;
+
+	init(throttle,throttleTime);
+
+	// Library methods
+
+	window.nl_responsiveTable = {
+		resize: resize,
+	};
+
 	////////////////////// fn
 
 	function resize(){
@@ -37,7 +43,6 @@
 					setHeaders();
 
 				}
-
 				// last, it does compress the table
 				addClass(compressClass);
 
@@ -97,7 +102,7 @@
 
 		}
 	}
-
+	
 	// class control 
 	function hasClass(className){
 		return table.className.search(className) !== -1;
@@ -109,6 +114,29 @@
 
 	function addClass(className){
 		table.className += ' '+className;
+	}
+
+	// Initialize 
+	function init( throttle, throttleTime ){
+		// first, it does resize the tables
+		resize();
+
+		// Then it does decide if it must throttle
+		if( throttle ){
+			window.addEventListener("resize", function() {
+
+				clearTimeout(timeout);
+				timeout = setTimeout(function() {
+
+					resize();
+
+				}, throttleTime);
+
+			});
+		}else{
+			window.addEventListener("resize", resize );
+		}
+
 	}
 
 })();
