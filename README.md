@@ -1,4 +1,4 @@
-# responsive-tables
+# responsive-tables v0.1
 
 A tiny and free dependency solution for responsive web design tables made with Vanilla JS and CSS. <br>
 It works with multiple tables.
@@ -7,9 +7,11 @@ Minified Javascript -> 1.027 bytes <br>
 Minified CSS -> 195 bytes <br>
 (You can find this files in dist folder) <br>
 
-[Demo](http://codepen.io/nacholozano/pen/zqwXNm?editors=0010)
+[Demo](http://codepen.io/nacholozano/pen/aNLMRm?editors=0010)
 
 ## Browser support from [Can I use](http://caniuse.com/)
+
+You might want change the flex display in css for better compatibility with IE <br> <br>
  
 ![alt text](http://i.imgur.com/g8QyFRt.jpg "Browser support")
 
@@ -45,6 +47,7 @@ If you need to recalculate de tables width you can run `nl_responsiveTable.resiz
 
 ## Future
 
-1. Customizable library
-2. Accessible tables
-3. More types of tables and styles
+1. NPM and Bower packages
+2. Customizable library
+3. Accessible tables
+4. More types of tables and styles
