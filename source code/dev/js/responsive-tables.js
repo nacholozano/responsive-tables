@@ -3,22 +3,23 @@
 	var tables = document.getElementsByClassName('responsive-table'), // get tables
 			numTables = tables.length, // get number of tables
 			tableWidthAtt = 'data-originalWidth', // name of the attibute we add to each table to know when remove 'compress-table' class
-			compressClass = 'compress-table', // class for compress tables
 			headersSelectors = 'thead>tr>th', // get table header
 			cellHeaderAtt = 'data-header', // name of the html attribute that will contain the column header value, this attribute will be set on each <td> tag when the table is compressed
 			itTables,itHeaders,itCells,  // iterators
 			table,containerWidth,headers,cells, // current table information
-	
-			timeout,
-			throttle = false,   // <-------------------------------- throttle here !!
+			
+			timeout, // a simple timeout for throttle
+			
+			// Configuration vars
+			compressClass = 'compress-table', // class for compress tables
+			throttle = true,   // throttle 
 			throttleTime = 300;
-
-	init(throttle,throttleTime);
 
 	// Library methods
 
 	window.nl_responsiveTable = {
 		resize: resize,
+		init: init,
 	};
 
 	////////////////////// fn
@@ -117,7 +118,10 @@
 	}
 
 	// Initialize 
-	function init( throttle, throttleTime ){
+	function init( JSONconf ){
+		// configuration
+		conf(JSONconf);
+		
 		// first, it does resize the tables
 		resize();
 
@@ -139,4 +143,17 @@
 
 	}
 
+	// configuration
+	function conf (conf){
+		if(conf.hasOwnProperty('throttle')){
+			throttle = conf.throttle;
+		}
+		if(conf.hasOwnProperty('throttleTime')){
+			throttleTime = conf.throttleTime;
+		}
+		if(conf.hasOwnProperty('compressClass')){
+			compressClass = conf.compressClass;
+		}
+	}
+	
 })();
