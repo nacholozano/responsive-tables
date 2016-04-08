@@ -17,6 +17,13 @@ You might want change the flex display in css for better compatibility with IE
 
 ## Instalation
 
+Just add the files from dist folder
+
+```
+<link rel="stylesheet" href="css/responsive-tables.css">
+<script src="js/responsive-tables.js"></script>
+```
+
 ## Usage
 
 
@@ -29,7 +36,8 @@ There are some required css rules ( [See required css rules](https://github.com/
 
 - Configuration
 
-```nl_responsiveTable.init({
+```
+nl_responsiveTable.init({
 	throttle: false,  // default: true
 	throttleTime: 1000, // default: 300
 	compressClass: 'compress-table', // default: compress-table
