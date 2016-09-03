@@ -1,3 +1,5 @@
+# For some reason, it does not work out of codepen
+
 # responsive-tables [v0.2](https://github.com/nacholozano/responsive-tables/blob/master/CHANGELOG.md)
 
 A tiny and free dependency solution for responsive web design tables made with Vanilla JS and CSS.
