@@ -4,8 +4,10 @@
 
 A tiny and free dependency solution for responsive web design tables made with Vanilla JS and CSS.
 
-Minified Javascript -> 1,3 kB <br>
-Minified CSS -> 0,195 KB <br>
+Javascript:
+	- Minified -> 1.3 KB <br>
+	- Minified + gzipped -> 672 bytes <br>
+Minified CSS -> 257 bytes <br>
 (You can find this files in dist folder) 
 
 [Demo](http://codepen.io/nacholozano/pen/aNLMRm?editors=0010)
